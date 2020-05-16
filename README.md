@@ -1,44 +1,47 @@
 # rEFInd theme Regular
 
-A simplistic clean and minimal theme for rEFInd
-
+A simplistic clean and minimal theme for rEFInd (**Now with Pop!_OS support**).
 
 ![Screenshot 01](http://i.imgur.com/wQQ5OiQ.png)
-**press F10 to take screenshot
 
+**press F10 to take screenshot**
 
-### Installation:
+## Installation
 
-1. Clone git repository to your $HOME directory.
-   ```
-   git clone https://github.com/munlik/refind-theme-regular.git
-   ```
+1. Clone this repository to your system.
 
-2. Locate refind directory under EFI partition. For most Linux based system is commonly `/boot/efi/EFI/refind/`. Copy theme directory to it.
+2. Locate refind directory under EFI partition. For most Linux based systems, this is generally `/boot/efi/EFI/refind/`. 
 
-   **Important:** Delete older installed versions of this theme before you proceed any further.
+3. Update `rEFInd_dir` variable in [install.sh](install.sh) with location from step 2.
 
-   ```
-   sudo rm -rf /boot/efi/EFI/refind/{regular-theme,refind-theme-regular}
-   ```
-   ```
-   sudo cp -r refind-theme-regular /boot/efi/EFI/refind/
-   ```
-3. Remove unused directory.
-   ```
-   sudo rm -rf /boot/efi/EFI/refind/refind-theme-regular/{src,.git}
-   ```
+4. Update `loader` and `initrd` file locations in [refind.conf](refind.conf).
 
-4. To adjust icon size and font size edit `theme.conf`.
-   ```
-   sudo nano /boot/efi/EFI/refind/refind-theme-regular/theme.conf
-   ```
+5. Choose icon and font size in [theme.conf](theme.conf) from the following options:
+   - Icon Size (*big_icon_size*-*small_icon_size*)
+     - 128-48
+     - 256-96
+     - 384-144
+   - Font Size (source-code-pro-extralight)
+     - 14
+     - 16
+     - 18
+     - 28
+     - 30
+     - 32
+     - 42
+     - 44
+     - 46
 
-5. To enable the theme add `include refind-theme-regular/theme.conf` at the end of `refind.conf`.
-   ```
-   sudo nano /boot/efi/EFI/refind/refind.conf
-   ```
+6. Set script as an executable
+   
+   `chmod +x install.sh`
 
-**More information**
+7. Run script with sudo permissions
+   
+   `sudo ./install.sh`
+
+## Attributions
 
 [rEFInd](http://www.rodsbooks.com/refind/) An official rEFInd website
+
+Forked from [rEFInd Theme Regular](https://www.deviantart.com/munlik/art/rEFInd-theme-512091944) by [munlik](https://www.deviantart.com/munlik).
