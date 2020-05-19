@@ -1,6 +1,8 @@
-# rEFInd theme Regular
+# rEFInd theme Regular (Dark)
 
-A simplistic clean and minimal theme for rEFInd (**Now with Pop!_OS support**).
+A simplistic clean and minimal **dark** theme for rEFInd (**Now with Pop!_OS support**).
+
+Modified background to be all black and simplified installation process with a script.
 
 ![Screenshot 01](http://i.imgur.com/wQQ5OiQ.png)
 
