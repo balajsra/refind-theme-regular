@@ -14,11 +14,13 @@ Modified background to be all black and simplified installation process with a s
 
 2. Locate refind directory under EFI partition. For most Linux based systems, this is generally `/boot/efi/EFI/refind/`. 
 
-3. Update `rEFInd_dir` variable in [install.sh](install.sh) with location from step 2.
+3. Update `rEFInd_dir` and `boot_dir` variables in [install.sh](install.sh) with location from step 2.
 
-4. Update `loader` and `initrd` file locations in [refind.conf](refind.conf).
+4. Update menu entries in [refind.conf](refind.conf) with `PARTUUID` and file locations.
 
-5. Choose icon and font size in [theme.conf](theme.conf) from the following options:
+5. Update `PARTUUID` in [refind_linux.conf](refind_linux.conf).
+
+6. Choose icon and font size in [theme.conf](theme.conf) from the following options:
    - Icon Size (*big_icon_size*-*small_icon_size*)
      - 128-48
      - 256-96
@@ -40,7 +42,7 @@ Modified background to be all black and simplified installation process with a s
 
 7. Run script with sudo permissions
    
-   `sudo ./install.sh`
+   `sudo /bin/bash install.sh`
 
 ## Attributions
 
