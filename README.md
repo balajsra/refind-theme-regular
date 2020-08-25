@@ -40,7 +40,7 @@ Modified background to be all black and simplified installation process with a s
    
    `chmod +x install.sh`
 
-7. Run script with sudo permissions
+7. Run script with super user permissions
    
    `sudo /bin/bash install.sh`
 
