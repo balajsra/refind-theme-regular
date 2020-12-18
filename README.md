@@ -16,11 +16,9 @@ Modified background to be all black and simplified installation process with a s
 
 3. Update `rEFInd_dir` and `boot_dir` variables in [install.sh](install.sh) with location from step 2.
 
-4. Update menu entries in [refind.conf](refind.conf) with `PARTUUID` and file locations.
+4. Update `root=` in [refind_linux.conf](refind_linux.conf) with the `/dev/...` path to the root partition.
 
-5. Update `PARTUUID` in [refind_linux.conf](refind_linux.conf).
-
-6. Choose icon and font size in [theme.conf](theme.conf) from the following options:
+5. Choose icon and font size in [theme.conf](theme.conf) from the following options:
    - Icon Size (*big_icon_size*-*small_icon_size*)
      - 128-48
      - 256-96
